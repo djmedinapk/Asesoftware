@@ -12,7 +12,7 @@ namespace Core.DataTest
         static List<User> users = fillUserTest();
         public static User Find(int id)
         {
-            return users.Single(user => user.Id == id);
+            return users.SingleOrDefault(user => user.Id == id);
         }
 
         public static List<User> ToList()
