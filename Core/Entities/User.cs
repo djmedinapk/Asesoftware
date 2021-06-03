@@ -15,5 +15,12 @@ namespace Core.Entities
         public int Edad { get; set; }
         public string BirthDay { get; set; }
 
+        public User(int id, string name, int edad, string birthDay)
+        {
+            Id = id;
+            Name = name;
+            Edad = edad;
+            BirthDay = birthDay;
+        }
     }
 }

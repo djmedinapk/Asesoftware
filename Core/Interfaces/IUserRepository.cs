@@ -9,7 +9,7 @@ namespace Core.Interfaces
 {
     public interface IUserRepository
     {
-        Task<User> getUserById(int id);
-        Task<IReadOnlyList<User>> getUsersAsync();
+        User getUserById(int id);
+        IReadOnlyList<User> getUsers();
     }
 }

@@ -1,4 +1,5 @@
-﻿using Core.Entities;
+﻿using Core.DataTest;
+using Core.Entities;
 using Core.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -10,14 +11,14 @@ namespace Logic.Logic
 {
     public class UserRepository : IUserRepository
     {
-        public Task<User> getUserById(int id)
+        public User getUserById(int id)
         {
-            throw new NotImplementedException();
+            return DbUsers.Find(id);
         }
 
-        public Task<IReadOnlyList<User>> getUsersAsync()
+        public IReadOnlyList<User> getUsers()
         {
-            throw new NotImplementedException();
+            return DbUsers.ToList();
         }
     }
 }
