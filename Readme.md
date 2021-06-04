@@ -5,16 +5,16 @@ prueba tecnica asesoftware
 
 1. Descargar el repositorio 
 
-´´´
+```
 git clone https://github.com/djmedinapk/Asesoftware
-´´´
+```
 
 2. Abrir la solucion *Asesoftware.sln*  con visual studio y compilar la solucion
 3. abrir una consola de windows dentro de la ruta *Asesoftware/asesoftware/* y ejecutar el siguiente comando en la consola
 
-´´´
+```
 npm start
-´´´
+```
 
 
 ## Descripción del Proyecto
