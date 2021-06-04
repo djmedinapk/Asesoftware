@@ -14,7 +14,7 @@ namespace Logic.Data.Configuration
         public void Configure(EntityTypeBuilder<User> builder)
         {
             builder.Property(p => p.Name).IsRequired().HasMaxLength(250);
-            builder.Property(p => p.Edad).IsRequired();
+            builder.Property(p => p.Age).IsRequired();
             builder.Property(p => p.BirthDay).IsRequired().HasMaxLength(50);
         }
     }

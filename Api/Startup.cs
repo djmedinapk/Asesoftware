@@ -28,6 +28,16 @@ namespace Api
         {
             services.AddTransient<IUserRepository, UserRepository>();
             services.AddControllers();
+
+            services.AddCors(opt =>
+            {
+                opt.AddPolicy("cors", rule =>
+                {
+                    rule.AllowAnyHeader().AllowAnyMethod().WithOrigins("*");
+                });
+            });
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -39,6 +49,7 @@ namespace Api
             }
 
             app.UseRouting();
+            app.UseCors("cors");
 
             app.UseAuthorization();
 
